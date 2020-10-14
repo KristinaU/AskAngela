@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     
-    var mainMenuArray = ["Put an idea to the to-do list", "Get an idea from to-do list", "Add a resolution", "Review your resolutions", "See horoscope for today"]
+    var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "Add a resolution", "Review your resolutions", "See horoscope for today"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,5 +44,25 @@ extension ViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print ("row tapped")
 
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var newWindowViewController: UIViewController;
+    
+    if indexPath.row == 0 {
+        newWindowViewController = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+        self.navigationController?.pushViewController(newWindowViewController, animated: true)
+    }
+    
+    if indexPath.row == 1 {
+        newWindowViewController = storyboard.instantiateViewController(withIdentifier: "RetrieveViewController") as! RetrieveViewController
+        self.navigationController?.pushViewController(newWindowViewController, animated: true)
+    }
+    
+    else {
+        print ("Oops, not implemented yet")
+    }
+    
+    
+    
 }
 }
