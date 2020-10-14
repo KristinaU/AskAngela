@@ -25,7 +25,7 @@ class NoteViewController: UIViewController {
         let newNote = Note(context: mainContext)
         
         newNote.text = noteTextField.text
-        newNote.text = "White"
+        newNote.colour = "White"
         newNote.dateCreated = Date()
         newNote.dateArchived = nil
         newNote.archived = false
