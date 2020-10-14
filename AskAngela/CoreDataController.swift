@@ -22,7 +22,7 @@ class CoreDataController {
     // MARK: - Core Data Stack
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "Note")
+        let container = NSPersistentContainer(name: "AskAngela")
         container.loadPersistentStores(completionHandler : { (storeDescription, error) in
             if let error = error as NSError? {
                 
