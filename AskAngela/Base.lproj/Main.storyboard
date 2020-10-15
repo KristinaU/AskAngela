@@ -58,11 +58,55 @@
                         <outlet property="mainTableView" destination="EUp-Wn-2Mg" id="5gp-9i-mrc"/>
                         <segue destination="kDf-KY-Zec" kind="presentation" id="5zF-6Q-2BJ"/>
                         <segue destination="lgV-cs-iPz" kind="presentation" id="3bJ-BM-Sds"/>
+                        <segue destination="nbq-FT-tNP" kind="presentation" id="KNW-jG-HNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--Archive Vew Controller-->
+        <scene sceneID="DTa-i5-RsP">
+            <objects>
+                <viewController storyboardIdentifier="ArchiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nbq-FT-tNP" userLabel="Archive Vew Controller" customClass="ArchiveViewController" customModule="AskAngela" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6o9-vs-XLM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-mq-ZnK">
+                                <rect key="frame" x="10" y="10" width="394" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6Jd-1a-RYL">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Jd-1a-RYL" id="FMP-33-lN8">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nbq-FT-tNP" kind="presentation" trigger="accessoryAction" id="awo-YD-20H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D15-h8-FhB" firstAttribute="trailing" secondItem="TkE-mq-ZnK" secondAttribute="trailing" constant="10" id="8Lm-xY-ylV"/>
+                            <constraint firstItem="TkE-mq-ZnK" firstAttribute="top" secondItem="D15-h8-FhB" secondAttribute="top" constant="10" id="H9B-CC-ti9"/>
+                            <constraint firstItem="TkE-mq-ZnK" firstAttribute="leading" secondItem="D15-h8-FhB" secondAttribute="leading" constant="10" id="PiO-46-VRg"/>
+                            <constraint firstItem="D15-h8-FhB" firstAttribute="bottom" secondItem="TkE-mq-ZnK" secondAttribute="bottom" constant="10" id="aWc-aG-63D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D15-h8-FhB"/>
+                    </view>
+                    <connections>
+                        <outlet property="archiveTableView" destination="TkE-mq-ZnK" id="crG-vr-FLE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfF-T2-rNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="810"/>
         </scene>
         <!--Retrieve View Controller-->
         <scene sceneID="cb1-rk-rmP">

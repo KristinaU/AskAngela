@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     
-    var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "Add a resolution", "Review your resolutions", "See horoscope for today"]
+    var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "See archived notes", "Add a resolution", "Review your resolutions", "See horoscope for today"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,12 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(newWindowViewController, animated: true)
     }
     
+    else if indexPath.row == 2 {
+        newWindowViewController = storyboard.instantiateViewController(withIdentifier: "ArchiveViewController") as! ArchiveViewController
+        self.navigationController?.pushViewController(newWindowViewController, animated: true)
+    }
+        
+        
     else {
     }
     

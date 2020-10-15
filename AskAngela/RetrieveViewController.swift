@@ -20,6 +20,7 @@ class RetrieveViewController: UIViewController {
         let date = Date()
         currentNote.dateArchived = date
         currentNote.archived = true
+        self.reload()
         }
     
     @IBAction func anotherOneAction(_ sender: Any) {
