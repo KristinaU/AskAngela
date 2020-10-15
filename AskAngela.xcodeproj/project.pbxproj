@@ -15,6 +15,9 @@
 		D7AD5F222535DF04009D07CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AD5F212535DF04009D07CD /* Assets.xcassets */; };
 		D7AD5F252535DF04009D07CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AD5F232535DF04009D07CD /* LaunchScreen.storyboard */; };
 		D7AD5F302535DF04009D07CD /* AskAngelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F2F2535DF04009D07CD /* AskAngelaTests.swift */; };
+		D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F3A25361951009D07CD /* NoteViewController.swift */; };
+		D7AD5F4125362485009D07CD /* RetrieveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F4025362485009D07CD /* RetrieveViewController.swift */; };
+		D7AD5F43253628CD009D07CD /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F42253628CD009D07CD /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		D7AD5F2B2535DF04009D07CD /* AskAngelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AskAngelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AD5F2F2535DF04009D07CD /* AskAngelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAngelaTests.swift; sourceTree = "<group>"; };
 		D7AD5F312535DF04009D07CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7AD5F3A25361951009D07CD /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		D7AD5F4025362485009D07CD /* RetrieveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveViewController.swift; sourceTree = "<group>"; };
+		D7AD5F42253628CD009D07CD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,10 @@
 				D7AD5F152535DF01009D07CD /* AppDelegate.swift */,
 				D7AD5F172535DF01009D07CD /* SceneDelegate.swift */,
 				D7AD5F192535DF01009D07CD /* ViewController.swift */,
+				D7AD5F3A25361951009D07CD /* NoteViewController.swift */,
+				D7AD5F4025362485009D07CD /* RetrieveViewController.swift */,
 				D7AD5F1B2535DF01009D07CD /* Main.storyboard */,
+				D7AD5F42253628CD009D07CD /* CoreDataController.swift */,
 				D7AD5F212535DF04009D07CD /* Assets.xcassets */,
 				D7AD5F232535DF04009D07CD /* LaunchScreen.storyboard */,
 				D7AD5F262535DF04009D07CD /* Info.plist */,
@@ -206,6 +215,9 @@
 				D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */,
 				D7AD5F202535DF01009D07CD /* AskAngela.xcdatamodeld in Sources */,
 				D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */,
+				D7AD5F4125362485009D07CD /* RetrieveViewController.swift in Sources */,
+				D7AD5F43253628CD009D07CD /* CoreDataController.swift in Sources */,
+				D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */,
 				D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
