@@ -20,7 +20,6 @@ class RetrieveViewController: UIViewController {
         let date = Date()
         currentNote.dateArchived = date
         currentNote.archived = true
-        print("Archived")
         }
     
     @IBAction func anotherOneAction(_ sender: Any) {
@@ -53,7 +52,7 @@ class RetrieveViewController: UIViewController {
             }
             
             let randomNumber = Int.random(in: 0..<notesArray.count)
-            print(notesArray.count)
+
             currentNote = notesArray[randomNumber]
             
             retrieveTextView.text = currentNote.text
