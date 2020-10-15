@@ -11,17 +11,25 @@ import CoreData
 
 class RetrieveViewController: UIViewController {
     
+    var currentNote = Note()
+    
     @IBOutlet weak var retrieveTextView: UITextView!
     
+    @IBAction func archiveAction(_ sender: Any) {
+        
+        let date = Date()
+        currentNote.dateArchived = date
+        currentNote.archived = true
+        print("Archived")
+        }
     
     @IBAction func anotherOneAction(_ sender: Any) {
         self.reload()
-        print("One more note")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.reload()
     }
     
     func reload() {
@@ -36,27 +44,24 @@ class RetrieveViewController: UIViewController {
             
             let notes = try mainContext.fetch(fetchNotes)
             
-            let notesCount = notes.count
-            
             var notesArray = [Note]()
             
             for (index, note) in notes.enumerated() {
+                if !note.archived {
                 notesArray.append(note)
+                }
             }
             
-            let randomNumber = Int.random(in: 0..<notesCount)
-            print(randomNumber)
+            let randomNumber = Int.random(in: 0..<notesArray.count)
+            print(notesArray.count)
+            currentNote = notesArray[randomNumber]
             
-            print(notesArray[randomNumber].text)
-            
-            retrieveTextView.text = notesArray[randomNumber].text
+            retrieveTextView.text = currentNote.text
             
         } catch let fetch_error {
             retrieveTextView.text = fetch_error.localizedDescription
             print(fetch_error.localizedDescription)
         }
-        
-        
         
     }
     

@@ -39,11 +39,3 @@ class NoteViewController: UIViewController {
     }
     
 }
-
-extension ViewController: UITextViewDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-}

@@ -89,6 +89,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn8-Gh-n9K">
                                 <rect key="frame" x="222" y="528" width="127" height="30"/>
                                 <state key="normal" title="Archive"/>
+                                <connections>
+                                    <action selector="archiveAction:" destination="lgV-cs-iPz" eventType="touchUpInside" id="ebK-aS-zSP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

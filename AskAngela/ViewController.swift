@@ -42,7 +42,6 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print ("row tapped")
 
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
@@ -53,13 +52,12 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(newWindowViewController, animated: true)
     }
     
-    if indexPath.row == 1 {
+    else if indexPath.row == 1 {
         newWindowViewController = storyboard.instantiateViewController(withIdentifier: "RetrieveViewController") as! RetrieveViewController
         self.navigationController?.pushViewController(newWindowViewController, animated: true)
     }
     
     else {
-        print ("Oops, not implemented yet")
     }
     
     
