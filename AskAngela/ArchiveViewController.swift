@@ -39,9 +39,9 @@ class ArchiveViewController: UIViewController {
                 let notes = try mainContext.fetch(fetchNotes)
                 
                 for (index, note) in notes.enumerated() {
-//                    if note.archived {
+                    if note.archived {
                         archivedNotesArray.append(note)
-//                    }
+                    }
                 }
                 
             } catch let fetch_error {
@@ -60,7 +60,7 @@ extension ArchiveViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        cell.textLabel?.text = String(archivedNotesArray[indexPath.row].archived)
+        cell.textLabel?.text = String(archivedNotesArray[indexPath.row].text!)
         return cell
     }
     

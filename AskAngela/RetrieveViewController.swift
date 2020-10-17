@@ -13,6 +13,10 @@ class RetrieveViewController: UIViewController {
     
     var currentNote = Note()
     
+    let coreDataController = CoreDataController.shared
+    
+    let fetchNotes: NSFetchRequest<Note> = Note.fetchRequest()
+    
     @IBOutlet weak var retrieveTextView: UITextView!
     
     @IBAction func archiveAction(_ sender: Any) {
@@ -20,6 +24,7 @@ class RetrieveViewController: UIViewController {
         let date = Date()
         currentNote.dateArchived = date
         currentNote.archived = true
+        coreDataController.saveContext()
         self.reload()
         }
     
@@ -34,11 +39,7 @@ class RetrieveViewController: UIViewController {
     
     func reload() {
         
-        let coreDataController = CoreDataController.shared
-        
         let mainContext = coreDataController.mainContext
-        
-        let fetchNotes: NSFetchRequest<Note> = Note.fetchRequest()
         
         do {
             
