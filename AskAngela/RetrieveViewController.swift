@@ -53,12 +53,22 @@ class RetrieveViewController: UIViewController {
                 }
             }
             
-            let randomNumber = Int.random(in: 0..<notesArray.count)
+            if notesArray.count != 0 {
+            
+                let randomNumber = Int.random(in: 0..<notesArray.count)
 
-            currentNote = notesArray[randomNumber]
+                currentNote = notesArray[randomNumber]
             
-            retrieveTextView.text = currentNote.text
+                retrieveTextView.text = currentNote.text
+                
+            }
             
+            else {
+                retrieveTextView.text = "Nothing to retrieve, your ideas list is empty!"
+            }
+            
+                
+                
         } catch let fetch_error {
             retrieveTextView.text = fetch_error.localizedDescription
             print(fetch_error.localizedDescription)

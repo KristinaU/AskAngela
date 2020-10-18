@@ -20,6 +20,7 @@
 		D7ECCF002537EAA900A350C2 /* AskAngela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCEFE2537EAA900A350C2 /* AskAngela.xcdatamodeld */; };
 		D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCEFE2537EAA900A350C2 /* AskAngela.xcdatamodeld */; };
 		D7ECCF0725387ABF00A350C2 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */; };
+		D7ECCF0A253C871800A350C2 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCF09253C871700A350C2 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D7AD5F42253628CD009D07CD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		D7ECCEFF2537EAA900A350C2 /* AskAngela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AskAngela.xcdatamodel; sourceTree = "<group>"; };
 		D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		D7ECCF09253C871700A350C2 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +94,11 @@
 			children = (
 				D7AD5F152535DF01009D07CD /* AppDelegate.swift */,
 				D7AD5F172535DF01009D07CD /* SceneDelegate.swift */,
-				D7AD5F192535DF01009D07CD /* ViewController.swift */,
+				D7ECCF09253C871700A350C2 /* Joke.swift */,
 				D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */,
-				D7AD5F3A25361951009D07CD /* NoteViewController.swift */,
 				D7AD5F4025362485009D07CD /* RetrieveViewController.swift */,
+				D7AD5F3A25361951009D07CD /* NoteViewController.swift */,
+				D7AD5F192535DF01009D07CD /* ViewController.swift */,
 				D7AD5F1B2535DF01009D07CD /* Main.storyboard */,
 				D7AD5F42253628CD009D07CD /* CoreDataController.swift */,
 				D7AD5F212535DF04009D07CD /* Assets.xcassets */,
@@ -223,6 +226,7 @@
 				D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */,
 				D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */,
 				D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */,
+				D7ECCF0A253C871800A350C2 /* Joke.swift in Sources */,
 				D7ECCF0725387ABF00A350C2 /* ArchiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
