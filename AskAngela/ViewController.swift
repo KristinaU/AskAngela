@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-    func loadJoke() {
+    func showJoke() {
         
         let urlString = "https://icanhazdadjoke.com/"
         var jokeResponce: [String: Any] = [:]
@@ -54,6 +54,11 @@ extension ViewController {
 
                 let alert = UIAlertController(title: "Joke of the day", message: joke, preferredStyle: .alert)
 
+                alert.addAction(UIAlertAction(title: "More", style: .default) {
+                (action) -> Void in
+                self.showJoke()
+                })
+                
                 alert.addAction(UIAlertAction(title: "Share", style: .default) {
                     (action) -> Void in
                     let activityViewController = UIActivityViewController(activityItems: [joke], applicationActivities: nil)
@@ -62,7 +67,8 @@ extension ViewController {
                 })
                 
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                    
+                
+                
                     self.present(alert, animated: true)
 
                 }
@@ -107,7 +113,7 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     else if indexPath.row == 5 {
         
-        loadJoke()
+        showJoke()
         
     }
         
