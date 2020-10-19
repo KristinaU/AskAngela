@@ -111,6 +111,11 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(newWindowViewController, animated: true)
     }
         
+    else if indexPath.row == 3 {
+        newWindowViewController = storyboard.instantiateViewController(withIdentifier: "AddResolutionViewController") as! AddResolutionViewController
+        self.navigationController?.pushViewController(newWindowViewController, animated: true)
+    }
+        
     else if indexPath.row == 5 {
         
         showJoke()
