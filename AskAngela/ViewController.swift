@@ -16,16 +16,59 @@ class ViewController: UIViewController {
     
     var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "See archived ideas", "Add a resolution", "Review your resolutions", "Get a joke to cheer up"]
     
+    func pushConfigurationViewController(_ viewController: UIViewController!) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.mainTableView.dataSource = self
-        self.mainTableView.delegate = self as? UITableViewDelegate
+        self.mainTableView.delegate = self
         self.mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
 }
 
+extension ViewController {
+    
+    func loadJoke() {
+        
+        let urlString = "https://icanhazdadjoke.com/"
+        var jokeResponce: [String: Any] = [:]
+        
+        let url = NSURL(string: urlString)!
+        var request = URLRequest(url: url as URL)
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+         
+          URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data else {return}
+            
+            guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) else {return}
+            if let jsonDictionary = jsonObject as? [String: Any] {
+                jokeResponce = jsonDictionary
+            }
+            
+            let joke = jokeResponce["joke"] as! String
+            
+            DispatchQueue.main.async {
+
+                let alert = UIAlertController(title: "Joke of the day", message: joke, preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Share", style: .default) {
+                    (action) -> Void in
+                    let activityViewController = UIActivityViewController(activityItems: [joke], applicationActivities: nil)
+                 
+                    self.present(activityViewController, animated: true, completion: nil)
+                })
+                
+                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
+
+                }
+                }.resume()
+}
+}
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.mainMenuArray.count
@@ -64,41 +107,7 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     else if indexPath.row == 5 {
         
-        let urlString = "https://icanhazdadjoke.com/"
-        var jokeResponce: [String: Any] = [:]
-        
-        let url = NSURL(string: urlString)!
-        var request = URLRequest(url: url as URL)
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-         
-          URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let data = data else {return}
-            
-            guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) else {return}
-            if let jsonDictionary = jsonObject as? [String: Any] {
-                jokeResponce = jsonDictionary
-            }
-            
-            let joke = jokeResponce["joke"] as! String
-            
-            DispatchQueue.main.async {
-
-                let alert = UIAlertController(title: "Joke of the day", message: joke, preferredStyle: .alert)
-
-                alert.addAction(UIAlertAction(title: "Share", style: .default) {
-                    (action) -> Void in
-                    let activityViewController = UIActivityViewController(activityItems: [joke], applicationActivities: nil)
-                 
-                    self.present(activityViewController, animated: true, completion: nil)
-                })
-                
-                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                
-                self.present(alert, animated: true)
-
-            }
-
-            }.resume()
+        loadJoke()
         
     }
         
