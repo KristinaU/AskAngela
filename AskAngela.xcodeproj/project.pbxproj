@@ -17,10 +17,10 @@
 		D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F3A25361951009D07CD /* NoteViewController.swift */; };
 		D7AD5F4125362485009D07CD /* RetrieveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F4025362485009D07CD /* RetrieveViewController.swift */; };
 		D7AD5F43253628CD009D07CD /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F42253628CD009D07CD /* CoreDataController.swift */; };
+		D7B19C5F253CBC7C0066B0E1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B19C5E253CBC7C0066B0E1 /* Social.framework */; };
 		D7ECCF002537EAA900A350C2 /* AskAngela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCEFE2537EAA900A350C2 /* AskAngela.xcdatamodeld */; };
 		D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCEFE2537EAA900A350C2 /* AskAngela.xcdatamodeld */; };
 		D7ECCF0725387ABF00A350C2 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */; };
-		D7ECCF0A253C871800A350C2 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCF09253C871700A350C2 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +48,9 @@
 		D7AD5F3A25361951009D07CD /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		D7AD5F4025362485009D07CD /* RetrieveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveViewController.swift; sourceTree = "<group>"; };
 		D7AD5F42253628CD009D07CD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		D7B19C5E253CBC7C0066B0E1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D7ECCEFF2537EAA900A350C2 /* AskAngela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AskAngela.xcdatamodel; sourceTree = "<group>"; };
 		D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
-		D7ECCF09253C871700A350C2 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B19C5F253CBC7C0066B0E1 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +78,7 @@
 				D7AD5F142535DF01009D07CD /* AskAngela */,
 				D7AD5F2E2535DF04009D07CD /* AskAngelaTests */,
 				D7AD5F132535DF01009D07CD /* Products */,
+				D7B19C5D253CBC7C0066B0E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +96,6 @@
 			children = (
 				D7AD5F152535DF01009D07CD /* AppDelegate.swift */,
 				D7AD5F172535DF01009D07CD /* SceneDelegate.swift */,
-				D7ECCF09253C871700A350C2 /* Joke.swift */,
 				D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */,
 				D7AD5F4025362485009D07CD /* RetrieveViewController.swift */,
 				D7AD5F3A25361951009D07CD /* NoteViewController.swift */,
@@ -116,6 +117,14 @@
 				D7AD5F312535DF04009D07CD /* Info.plist */,
 			);
 			path = AskAngelaTests;
+			sourceTree = "<group>";
+		};
+		D7B19C5D253CBC7C0066B0E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7B19C5E253CBC7C0066B0E1 /* Social.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +235,6 @@
 				D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */,
 				D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */,
 				D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */,
-				D7ECCF0A253C871800A350C2 /* Joke.swift in Sources */,
 				D7ECCF0725387ABF00A350C2 /* ArchiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -85,7 +85,14 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
                 let alert = UIAlertController(title: "Joke of the day", message: joke, preferredStyle: .alert)
 
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Share", style: .default) {
+                    (action) -> Void in
+                    let activityViewController = UIActivityViewController(activityItems: [joke], applicationActivities: nil)
+                 
+                    self.present(activityViewController, animated: true, completion: nil)
+                })
+                
+                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 
                 self.present(alert, animated: true)
 
@@ -95,10 +102,7 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
         
-    else {
-    }
-    
-    
+    else { return }
     
 }
 }
