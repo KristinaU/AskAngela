@@ -9,15 +9,17 @@
     </entity>
     <entity name="Resolution" representedClassName="Resolution" syncable="YES" codeGenerationType="class">
         <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="getNotified" optional="YES" attributeType="Transformable"/>
+        <attribute name="dateChecked" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gotNotifiedToday" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="img" optional="YES" attributeType="Binary"/>
         <attribute name="isStreak" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="streak" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notifyArray" optional="YES" attributeType="Binary"/>
+        <attribute name="streakNow" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Note" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Resolution" positionX="-63" positionY="18" width="128" height="148"/>
+        <element name="Resolution" positionX="-63" positionY="18" width="128" height="178"/>
     </elements>
 </model>

@@ -24,9 +24,6 @@ class ResolutionsViewController: UIViewController {
         self.resolutionsTableView.delegate = self as? UITableViewDelegate
         self.resolutionsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
      
-        self.view.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
-        resolutionsTableView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
-        
     }
     
     func load() {
@@ -64,7 +61,6 @@ extension ResolutionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = String(resolutionsArray[indexPath.row].title!)
-        cell.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         return cell
     }
     

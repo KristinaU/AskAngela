@@ -29,12 +29,6 @@ class ViewController: UIViewController {
         self.mainTableView.delegate = self
         self.mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.view.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
-        mainTableView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
-        mainTextView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
-        
-        
-        
     }
     
 }
@@ -94,7 +88,6 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = mainMenuArray[indexPath.row]
-        cell.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         return cell
     }
     

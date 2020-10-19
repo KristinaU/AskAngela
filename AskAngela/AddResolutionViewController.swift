@@ -31,7 +31,7 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
            newResolution.text = resolutionText.text
            newResolution.dateAdded = Date()
            newResolution.isStreak = false
-           newResolution.streak = 0
+           newResolution.streakNow = 0
         
         outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
            
@@ -40,8 +40,6 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
     @IBOutlet weak var weCanDoIt: UIImageView!
     
     @IBAction func setOwnImage(_ sender: Any) {
-        
-        print("Button pressed")
         
         let picker = UIImagePickerController()
         picker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
