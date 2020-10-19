@@ -11,6 +11,9 @@ import Social
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var mainTextView: UITextView!
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     
@@ -26,7 +29,14 @@ class ViewController: UIViewController {
         self.mainTableView.delegate = self
         self.mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
+        self.view.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
+        mainTableView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
+        mainTextView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
+        
+        
+        
     }
+    
 }
 
 extension ViewController {
@@ -62,7 +72,7 @@ extension ViewController {
                 alert.addAction(UIAlertAction(title: "Share", style: .default) {
                     (action) -> Void in
                     let activityViewController = UIActivityViewController(activityItems: [joke], applicationActivities: nil)
-                 
+
                     self.present(activityViewController, animated: true, completion: nil)
                 })
                 
@@ -84,6 +94,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = mainMenuArray[indexPath.row]
+        cell.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         return cell
     }
     
@@ -125,4 +136,6 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     else { return }
     
 }
+    
+    
 }

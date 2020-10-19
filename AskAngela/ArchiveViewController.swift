@@ -23,6 +23,9 @@ class ArchiveViewController: UIViewController {
         self.archiveTableView.dataSource = self
         self.archiveTableView.delegate = self as? UITableViewDelegate
         self.archiveTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+     
+        self.view.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
+        archiveTableView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         
     }
     
@@ -61,6 +64,7 @@ extension ArchiveViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = String(archivedNotesArray[indexPath.row].text!)
+        cell.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
         return cell
     }
     

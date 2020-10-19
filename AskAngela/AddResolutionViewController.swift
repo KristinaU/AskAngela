@@ -6,18 +6,45 @@
 //  Copyright © 2020 The App Experts. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import MultiSelectSegmentedControl
+import SwiftUI
 
 class AddResolutionViewController: UIViewController & UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     
+    @IBOutlet weak var resolutionTitle: UITextField!
+    
+    @IBOutlet weak var resolutionText: UITextView!
+    
+    @IBOutlet weak var outputLabelText: UILabel!
+    
+    @IBAction func saveResolutionAction(_ sender: UIButton) {
+           
+        let coreDataController = CoreDataController.shared
+        
+        let mainContext = coreDataController.mainContext
+           
+        let newResolution = Resolution(context: mainContext)
+           
+           newResolution.title = resolutionTitle.text
+           newResolution.text = resolutionText.text
+           newResolution.dateAdded = Date()
+           newResolution.isStreak = false
+           newResolution.streak = 0
+        
+        outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
+           
+       }
+    
     @IBOutlet weak var weCanDoIt: UIImageView!
     
-    @IBAction func setOwnImage(_ sender: UIButton) {
+    @IBAction func setOwnImage(_ sender: Any) {
+        
+        print("Button pressed")
         
         let picker = UIImagePickerController()
-        picker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        picker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
         picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         present(picker, animated: true)
@@ -28,13 +55,27 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
         weCanDoIt.image = userPickedImage
         picker.dismiss(animated: true)
         
-        
     }
     
-
+    @IBOutlet weak var selectNotifications: MultiSelectSegmentedControl!
+    
+    @objc func selectionChanged(multiSelectSegmentedControl: MultiSelectSegmentedControl) {
+        print(multiSelectSegmentedControl.selectedSegmentTitles)
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    super.viewDidLoad()
+    
+        selectNotifications.items = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        selectNotifications.selectedBackgroundColor = .blue
+        selectNotifications.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
+    
+    let selectedIndices: IndexSet = selectNotifications.selectedSegmentIndexes
+
+       
     }
 
+    
+    
+    
 }
