@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71BAA71253DE3B30077FB22 /* ResolutionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */; };
 		D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F152535DF01009D07CD /* AppDelegate.swift */; };
 		D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F172535DF01009D07CD /* SceneDelegate.swift */; };
 		D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F192535DF01009D07CD /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionsViewController.swift; sourceTree = "<group>"; };
 		D7AD5F122535DF01009D07CD /* AskAngela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskAngela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AD5F152535DF01009D07CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AD5F172535DF01009D07CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				D7AD5F152535DF01009D07CD /* AppDelegate.swift */,
 				D7AD5F172535DF01009D07CD /* SceneDelegate.swift */,
+				D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */,
 				D7B19C62253D47450066B0E1 /* AddResolutionViewController.swift */,
 				D7B19C6B253D673E0066B0E1 /* MultiSegmentPicker.swift */,
 				D7B19C66253D47980066B0E1 /* DataBaseHelper.swift */,
@@ -249,6 +252,7 @@
 				D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */,
 				D7B19C6C253D673E0066B0E1 /* MultiSegmentPicker.swift in Sources */,
 				D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */,
+				D71BAA71253DE3B30077FB22 /* ResolutionsViewController.swift in Sources */,
 				D7AD5F4125362485009D07CD /* RetrieveViewController.swift in Sources */,
 				D7AD5F43253628CD009D07CD /* CoreDataController.swift in Sources */,
 				D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */,

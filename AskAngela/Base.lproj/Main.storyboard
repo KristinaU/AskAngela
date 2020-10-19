@@ -172,13 +172,41 @@
         <!--Resolutions View Controller-->
         <scene sceneID="8Ce-ro-TWj">
             <objects>
-                <viewController id="rEY-x3-de8" customClass="ResolutionsViewController" customModule="AskAngela" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResolutionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rEY-x3-de8" customClass="ResolutionsViewController" customModule="AskAngela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JVf-NK-WE8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93I-cv-3LZ">
+                                <rect key="frame" x="10" y="20" width="394" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="fCX-Ly-woi">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fCX-Ly-woi" id="kHc-Ym-QJi">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rEY-x3-de8" kind="presentation" trigger="accessoryAction" id="Vp4-oM-vZs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UnD-W7-uqh" firstAttribute="bottom" secondItem="93I-cv-3LZ" secondAttribute="bottom" constant="10" id="PBp-jG-f3r"/>
+                            <constraint firstItem="93I-cv-3LZ" firstAttribute="leading" secondItem="UnD-W7-uqh" secondAttribute="leading" constant="10" id="Qev-Lu-7KJ"/>
+                            <constraint firstItem="93I-cv-3LZ" firstAttribute="top" secondItem="UnD-W7-uqh" secondAttribute="top" constant="20" id="cqf-sF-yNj"/>
+                            <constraint firstItem="UnD-W7-uqh" firstAttribute="trailing" secondItem="93I-cv-3LZ" secondAttribute="trailing" constant="10" id="rxg-QS-wYj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UnD-W7-uqh"/>
                     </view>
+                    <connections>
+                        <outlet property="resolutionsTableView" destination="93I-cv-3LZ" id="eex-CB-oDn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFX-ee-h4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
