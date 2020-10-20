@@ -12,6 +12,8 @@ import SwiftUI
 
 class AddResolutionViewController: UIViewController & UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    var selectedDays: [String] = []
+    
     
     @IBOutlet weak var resolutionTitle: UITextField!
     
@@ -27,11 +29,13 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
            
         let newResolution = Resolution(context: mainContext)
            
-           newResolution.title = resolutionTitle.text
-           newResolution.text = resolutionText.text
-           newResolution.dateAdded = Date()
-           newResolution.isStreak = false
-           newResolution.streakNow = 0
+        newResolution.title = resolutionTitle.text
+        newResolution.text = resolutionText.text
+        newResolution.dateAdded = Date()
+        newResolution.isStreak = false
+        newResolution.streakNow = 0
+        newResolution.gotNotifiedToday = false
+        newResolution.notifyArray = selectedDays
         
         outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
            
@@ -58,6 +62,9 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
     @IBOutlet weak var selectNotifications: MultiSelectSegmentedControl!
     
     @objc func selectionChanged(multiSelectSegmentedControl: MultiSelectSegmentedControl) {
+        
+        self.selectedDays = multiSelectSegmentedControl.selectedSegmentTitles
+        
         print(multiSelectSegmentedControl.selectedSegmentTitles)
     }
     
@@ -68,7 +75,7 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
         selectNotifications.selectedBackgroundColor = .blue
         selectNotifications.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
     
-    let selectedIndices: IndexSet = selectNotifications.selectedSegmentIndexes
+        let _: IndexSet = selectNotifications.selectedSegmentIndexes
 
        
     }

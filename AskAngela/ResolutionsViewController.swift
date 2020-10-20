@@ -20,8 +20,8 @@ class ResolutionsViewController: UIViewController {
         super.viewDidLoad()
         self.load()
         
-        self.resolutionsTableView.dataSource = self as! UITableViewDataSource
-        self.resolutionsTableView.delegate = self as? UITableViewDelegate
+        self.resolutionsTableView.dataSource = self as UITableViewDataSource
+        self.resolutionsTableView.delegate = self
         self.resolutionsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
      
     }
@@ -38,7 +38,7 @@ class ResolutionsViewController: UIViewController {
                 
                 let resolutions = try mainContext.fetch(fetchResolutions)
                 
-                for (index, resolution) in resolutions.enumerated() {
+                for (_, resolution) in resolutions.enumerated() {
                     
                         resolutionsArray.append(resolution)
                     
@@ -69,20 +69,27 @@ extension ResolutionsViewController: UITableViewDataSource {
 extension ResolutionsViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    let currentNote = resolutionsArray[indexPath.row]
+    let currentResolution = resolutionsArray[indexPath.row]
     
-    let dateAdded = currentNote.dateAdded
+    let streakNow = currentResolution.streakNow
     
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
+    var goAhead = "You "
     
-    guard dateAdded != nil else { return }
+    if (currentResolution.isStreak) {
+        
+        goAhead += "are on streak for "
+        
+    }
     
-    let dateAddedString = formatter.string(from: dateAdded!)
+    else {
+        goAhead += "were on streak for "
+    }
     
-    let alert = UIAlertController(title: "Added on " + dateAddedString, message: resolutionsArray[indexPath.row].text, preferredStyle: .alert)
+    goAhead += String(streakNow) + " days"
+    
+    let alert = UIAlertController(title: goAhead, message: resolutionsArray[indexPath.row].text, preferredStyle: .alert)
 
-    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Wow!", style: .default, handler: nil))
 
     self.present(alert, animated: true)
 
