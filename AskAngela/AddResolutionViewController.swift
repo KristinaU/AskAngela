@@ -37,6 +37,7 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
         newResolution.gotNotifiedToday = false
         newResolution.notifyArray = selectedDays
         
+        
         outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
            
        }
@@ -71,7 +72,14 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
     override func viewDidLoad() {
     super.viewDidLoad()
     
-        selectNotifications.items = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        selectNotifications.items = [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"]
         selectNotifications.selectedBackgroundColor = .blue
         selectNotifications.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
     

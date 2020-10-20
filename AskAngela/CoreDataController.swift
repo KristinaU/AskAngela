@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class CoreDataController {
     
@@ -48,7 +49,7 @@ class CoreDataController {
         }
         return false
     }
-    
+
 }
 
 

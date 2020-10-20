@@ -48,7 +48,7 @@ class RetrieveViewController: UIViewController {
             
             var notesArray = [Note]()
             
-            for (index, note) in notes.enumerated() {
+            for (_, note) in notes.enumerated() {
                 if !note.archived {
                 notesArray.append(note)
                 }

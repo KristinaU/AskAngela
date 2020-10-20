@@ -21,7 +21,7 @@ class ArchiveViewController: UIViewController {
         self.load()
         
         self.archiveTableView.dataSource = self
-        self.archiveTableView.delegate = self as? UITableViewDelegate
+        self.archiveTableView.delegate = self
         self.archiveTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
      
     }
@@ -38,7 +38,7 @@ class ArchiveViewController: UIViewController {
                 
                 let notes = try mainContext.fetch(fetchNotes)
                 
-                for (index, note) in notes.enumerated() {
+                for (_, note) in notes.enumerated() {
                     if note.archived {
                         archivedNotesArray.append(note)
                     }

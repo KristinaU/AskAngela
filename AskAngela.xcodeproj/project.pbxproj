@@ -20,7 +20,6 @@
 		D7AD5F43253628CD009D07CD /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F42253628CD009D07CD /* CoreDataController.swift */; };
 		D7B19C5F253CBC7C0066B0E1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B19C5E253CBC7C0066B0E1 /* Social.framework */; };
 		D7B19C63253D47450066B0E1 /* AddResolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B19C62253D47450066B0E1 /* AddResolutionViewController.swift */; };
-		D7B19C67253D47980066B0E1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B19C66253D47980066B0E1 /* DataBaseHelper.swift */; };
 		D7B19C6A253D60320066B0E1 /* MultiSelectSegmentedControl in Frameworks */ = {isa = PBXBuildFile; productRef = D7B19C69253D60320066B0E1 /* MultiSelectSegmentedControl */; };
 		D7B19C6C253D673E0066B0E1 /* MultiSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B19C6B253D673E0066B0E1 /* MultiSegmentPicker.swift */; };
 		D7ECCF002537EAA900A350C2 /* AskAngela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7ECCEFE2537EAA900A350C2 /* AskAngela.xcdatamodeld */; };
@@ -56,7 +55,6 @@
 		D7AD5F42253628CD009D07CD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		D7B19C5E253CBC7C0066B0E1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D7B19C62253D47450066B0E1 /* AddResolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResolutionViewController.swift; sourceTree = "<group>"; };
-		D7B19C66253D47980066B0E1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		D7B19C6B253D673E0066B0E1 /* MultiSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSegmentPicker.swift; sourceTree = "<group>"; };
 		D7ECCEFF2537EAA900A350C2 /* AskAngela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AskAngela.xcdatamodel; sourceTree = "<group>"; };
 		D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */,
 				D7B19C62253D47450066B0E1 /* AddResolutionViewController.swift */,
 				D7B19C6B253D673E0066B0E1 /* MultiSegmentPicker.swift */,
-				D7B19C66253D47980066B0E1 /* DataBaseHelper.swift */,
 				D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */,
 				D7AD5F4025362485009D07CD /* RetrieveViewController.swift */,
 				D7AD5F3A25361951009D07CD /* NoteViewController.swift */,
@@ -258,7 +255,6 @@
 				D7ECCF052537ECDD00A350C2 /* AskAngela.xcdatamodeld in Sources */,
 				D7AD5F3B25361951009D07CD /* NoteViewController.swift in Sources */,
 				D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */,
-				D7B19C67253D47980066B0E1 /* DataBaseHelper.swift in Sources */,
 				D7ECCF0725387ABF00A350C2 /* ArchiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

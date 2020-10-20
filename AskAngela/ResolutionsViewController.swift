@@ -40,6 +40,7 @@ class ResolutionsViewController: UIViewController {
                 
                 for (_, resolution) in resolutions.enumerated() {
                     
+                    
                         resolutionsArray.append(resolution)
                     
                 }
@@ -60,7 +61,9 @@ extension ResolutionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        
         cell.textLabel?.text = String(resolutionsArray[indexPath.row].title!)
+        
         return cell
     }
     

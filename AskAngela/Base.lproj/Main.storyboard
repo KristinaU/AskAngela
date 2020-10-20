@@ -418,7 +418,7 @@
         <image name="Angela" width="1000" height="1300"/>
         <image name="we-can-do-it" width="1483" height="1920"/>
         <namedColor name="BackgroundColor">
-            <color red="0.95999999999999996" green="0.95999999999999996" blue="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95999997854232788" green="0.95999997854232788" blue="0.95999997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
