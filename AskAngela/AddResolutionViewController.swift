@@ -12,7 +12,14 @@ import SwiftUI
 
 class AddResolutionViewController: UIViewController & UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
-    var selectedDays: [String] = []
+    var selectedDays: [String] = [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"]
     
     
     @IBOutlet weak var resolutionTitle: UITextField!
