@@ -9,13 +9,21 @@
 import UIKit
 import CoreData
 
+// MARK: - Archive
+// Shows all notes which were archived in a tableview
+// On click shows an alert with a note and date when archived
+
 class ArchiveViewController: UIViewController {
+    
+    // MARK: - Properties
 
     @IBOutlet weak var archiveTableView: UITableView!
 
     var archivedNotesArray = [Note]()
     
     override func viewDidLoad() {
+        
+        // MARK: - Standard viewDidLoad. Register tableview
         
         super.viewDidLoad()
         self.load()
@@ -25,6 +33,8 @@ class ArchiveViewController: UIViewController {
         self.archiveTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
      
     }
+    
+    // MARK: - Fetch archive. Create array.
     
     func load() {
             
@@ -52,6 +62,8 @@ class ArchiveViewController: UIViewController {
         
 }
 
+// MARK: - Set count and cells for tableview function
+
 extension ArchiveViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.archivedNotesArray.count
@@ -65,6 +77,8 @@ extension ArchiveViewController: UITableViewDataSource {
     }
     
 }
+
+// MARK: - Create an alert with individual note
 
 extension ArchiveViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
