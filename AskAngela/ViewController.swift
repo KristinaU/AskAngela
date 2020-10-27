@@ -11,15 +11,22 @@ import Social
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
     
     @IBOutlet weak var mainTextView: UITextView!
     
     @IBOutlet weak var mainTableView: UITableView!
     
+    // MARK: - Array of main menu items
+    
     var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "See archived ideas", "Add a resolution", "Review your resolutions", "Get a joke to cheer up"]
+    
+    // MARK: - Presents a configuration view controller that lets the user configure the post.
     
     func pushConfigurationViewController(_ viewController: UIViewController!) {
     }
+    
+    // MARK: - viewDidLoad, register main tableview
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +38,8 @@ class ViewController: UIViewController {
     }
     
 }
+
+// MARK: - Functionality for jokes, self-contained
 
 extension ViewController {
     
@@ -78,6 +87,8 @@ extension ViewController {
                 }.resume()
 }
 }
+// MARK: - Sets count and cells for tableview function
+
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.mainMenuArray.count
@@ -91,6 +102,8 @@ extension ViewController: UITableViewDataSource {
     }
     
 }
+
+//MARK: - Main menu complete implementation
 
 extension ViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
