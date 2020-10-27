@@ -9,7 +9,11 @@
 import UIKit
 import CoreData
 
+// MARK: - Fetch a random note.
+
 class RetrieveViewController: UIViewController {
+    
+    // MARK: - Properties
     
     var currentNote = Note()
     
@@ -18,6 +22,8 @@ class RetrieveViewController: UIViewController {
     let fetchNotes: NSFetchRequest<Note> = Note.fetchRequest()
     
     @IBOutlet weak var retrieveTextView: UITextView!
+    
+    // MARK: - Archive note (sets Boolean)
     
     @IBAction func archiveAction(_ sender: Any) {
         
@@ -28,6 +34,8 @@ class RetrieveViewController: UIViewController {
         self.reload()
         }
     
+    // MARK: - Shows another note
+    
     @IBAction func anotherOneAction(_ sender: Any) {
         self.reload()
     }
@@ -37,6 +45,8 @@ class RetrieveViewController: UIViewController {
         
         self.reload()
     }
+    
+    // MARK: - Main fetch implementation
     
     func reload() {
         
