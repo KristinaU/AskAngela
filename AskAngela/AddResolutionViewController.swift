@@ -10,8 +10,21 @@ import UIKit
 import MultiSelectSegmentedControl
 import SwiftUI
 
+// MARK: - Resolutions complete implementation
+
+// Sets a core data object with title and text
+// MultiSegmentPicker sets reminder for certain days of week
+
+
+// TODO: - implement reminder
+// TODO: - complete image picker
+// TODO: - finish segmented control array
+
+
 class AddResolutionViewController: UIViewController & UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    // MARK: - Properties
+    
     var selectedDays: [String] = [
     "Mon",
     "Tue",
@@ -27,6 +40,8 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
     @IBOutlet weak var resolutionText: UITextView!
     
     @IBOutlet weak var outputLabelText: UILabel!
+    
+    // MARK: - Action to save resolution and set new Resolution Core data object
     
     @IBAction func saveResolutionAction(_ sender: UIButton) {
            
@@ -49,6 +64,8 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
            
        }
     
+    // MARK: - Image Picker allows to set own motivational image
+    
     @IBOutlet weak var weCanDoIt: UIImageView!
     
     @IBAction func setOwnImage(_ sender: Any) {
@@ -67,6 +84,9 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
         
     }
     
+    // MARK: - MultiSegmented control sets notification days
+    // notification themselves not implemented yet
+    
     @IBOutlet weak var selectNotifications: MultiSelectSegmentedControl!
     
     @objc func selectionChanged(multiSelectSegmentedControl: MultiSelectSegmentedControl) {
@@ -75,6 +95,8 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
         
         print(multiSelectSegmentedControl.selectedSegmentTitles)
     }
+    
+    // MARK: - ViewDidLoad
     
     override func viewDidLoad() {
     super.viewDidLoad()
