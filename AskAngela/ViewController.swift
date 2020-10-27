@@ -103,7 +103,7 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-//MARK: - Main menu complete implementation
+// MARK: - Main menu complete implementation
 
 extension ViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
