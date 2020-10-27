@@ -9,11 +9,18 @@
 import UIKit
 import CoreData
 
+// MARK: - Presents tableview of resolutions
+// TODO: Streaks
+
 class ResolutionsViewController: UIViewController {
+    
+// MARK: - Properties
 
     @IBOutlet weak var resolutionsTableView: UITableView!
     
     var resolutionsArray = [Resolution]()
+    
+    // MARK: - viewDidLoad, register tableview
     
     override func viewDidLoad() {
         
@@ -25,6 +32,8 @@ class ResolutionsViewController: UIViewController {
         self.resolutionsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
      
     }
+    
+    // MARK: - Fetch resolutions, create array
     
     func load() {
             
@@ -53,6 +62,8 @@ class ResolutionsViewController: UIViewController {
         
 }
 
+// MARK: - Sets count and cells for tableview function
+
 extension ResolutionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.resolutionsArray.count
@@ -68,6 +79,10 @@ extension ResolutionsViewController: UITableViewDataSource {
     }
     
 }
+
+// MARK: - STREAK functionality
+// Streak shows how long you keep current resolution
+// If you are not on streak now it shows longest streak ever
 
 extension ResolutionsViewController: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
