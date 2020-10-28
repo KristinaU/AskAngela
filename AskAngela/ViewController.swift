@@ -19,7 +19,12 @@ class ViewController: UIViewController {
     
     // MARK: - Array of main menu items
     
-    var mainMenuArray = ["Put an idea to the to-do list", "Retrieve an idea from to-do list", "See archived ideas", "Add a resolution", "Review your resolutions", "Get a joke to cheer up"]
+    var mainMenuArray = ["Put an idea to the to-do list",
+                         "Retrieve an idea from to-do list",
+                         "See archived ideas",
+                         "Add a resolution",
+                         "Review your resolutions",
+                         "Get a joke to cheer up"]
     
     // MARK: - Presents a configuration view controller that lets the user configure the post.
     

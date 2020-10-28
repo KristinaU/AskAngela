@@ -110,6 +110,8 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     alert.addAction(UIAlertAction(title: "Wow!", style: .default, handler: nil))
 
     self.present(alert, animated: true)
+    
+    print(currentResolution.notifyArray)
 
 }
 

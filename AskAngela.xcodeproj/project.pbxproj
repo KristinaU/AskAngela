@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D71BAA71253DE3B30077FB22 /* ResolutionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */; };
+		D72653042549DD49007F3FBD /* NoteViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */; };
+		D72653072549E357007F3FBD /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653002549D754007F3FBD /* ViewControllerTests.swift */; };
 		D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F152535DF01009D07CD /* AppDelegate.swift */; };
 		D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F172535DF01009D07CD /* SceneDelegate.swift */; };
 		D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F192535DF01009D07CD /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionsViewController.swift; sourceTree = "<group>"; };
+		D72653002549D754007F3FBD /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewControllerTests.swift; sourceTree = "<group>"; };
 		D7AD5F122535DF01009D07CD /* AskAngela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskAngela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AD5F152535DF01009D07CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AD5F172535DF01009D07CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 		D7AD5F2E2535DF04009D07CD /* AskAngelaTests */ = {
 			isa = PBXGroup;
 			children = (
+				D72653002549D754007F3FBD /* ViewControllerTests.swift */,
+				D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */,
 				D7AD5F2F2535DF04009D07CD /* AskAngelaTests.swift */,
 				D7AD5F312535DF04009D07CD /* Info.plist */,
 			);
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72653042549DD49007F3FBD /* NoteViewControllerTests.swift in Sources */,
 				D7AD5F302535DF04009D07CD /* AskAngelaTests.swift in Sources */,
+				D72653072549E357007F3FBD /* ViewControllerTests.swift in Sources */,
 				D7ECCF002537EAA900A350C2 /* AskAngela.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +359,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -394,6 +403,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -405,6 +415,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
