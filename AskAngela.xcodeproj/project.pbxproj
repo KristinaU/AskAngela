@@ -10,6 +10,11 @@
 		D71BAA71253DE3B30077FB22 /* ResolutionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */; };
 		D72653042549DD49007F3FBD /* NoteViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */; };
 		D72653072549E357007F3FBD /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653002549D754007F3FBD /* ViewControllerTests.swift */; };
+		D72653102549F3F4007F3FBD /* ArchiveViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */; };
+		D72653122549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */; };
+		D72653132549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */; };
+		D72653152549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */; };
+		D72653162549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */; };
 		D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F152535DF01009D07CD /* AppDelegate.swift */; };
 		D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F172535DF01009D07CD /* SceneDelegate.swift */; };
 		D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F192535DF01009D07CD /* ViewController.swift */; };
@@ -43,6 +48,9 @@
 		D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionsViewController.swift; sourceTree = "<group>"; };
 		D72653002549D754007F3FBD /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewControllerTests.swift; sourceTree = "<group>"; };
+		D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewControllerTests.swift; sourceTree = "<group>"; };
+		D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResolutionViewControllerTests.swift; sourceTree = "<group>"; };
+		D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionsViewControllerTests.swift; sourceTree = "<group>"; };
 		D7AD5F122535DF01009D07CD /* AskAngela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskAngela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AD5F152535DF01009D07CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AD5F172535DF01009D07CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +138,9 @@
 			children = (
 				D72653002549D754007F3FBD /* ViewControllerTests.swift */,
 				D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */,
+				D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */,
+				D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */,
+				D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */,
 				D7AD5F2F2535DF04009D07CD /* AskAngelaTests.swift */,
 				D7AD5F312535DF04009D07CD /* Info.plist */,
 			);
@@ -251,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72653152549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */,
+				D72653122549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */,
 				D7B19C63253D47450066B0E1 /* AddResolutionViewController.swift in Sources */,
 				D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */,
 				D7B19C6C253D673E0066B0E1 /* MultiSegmentPicker.swift in Sources */,
@@ -269,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72653162549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */,
+				D72653102549F3F4007F3FBD /* ArchiveViewControllerTests.swift in Sources */,
 				D72653042549DD49007F3FBD /* NoteViewControllerTests.swift in Sources */,
 				D7AD5F302535DF04009D07CD /* AskAngelaTests.swift in Sources */,
+				D72653132549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */,
 				D72653072549E357007F3FBD /* ViewControllerTests.swift in Sources */,
 				D7ECCF002537EAA900A350C2 /* AskAngela.xcdatamodeld in Sources */,
 			);
