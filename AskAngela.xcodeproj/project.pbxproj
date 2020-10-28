@@ -11,7 +11,6 @@
 		D72653042549DD49007F3FBD /* NoteViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653022549DD49007F3FBD /* NoteViewControllerTests.swift */; };
 		D72653072549E357007F3FBD /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653002549D754007F3FBD /* ViewControllerTests.swift */; };
 		D72653102549F3F4007F3FBD /* ArchiveViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */; };
-		D72653122549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */; };
 		D72653132549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */; };
 		D72653152549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */; };
 		D72653162549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */; };
@@ -263,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72653152549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */,
-				D72653122549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */,
 				D7B19C63253D47450066B0E1 /* AddResolutionViewController.swift in Sources */,
 				D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */,
 				D7B19C6C253D673E0066B0E1 /* MultiSegmentPicker.swift in Sources */,
