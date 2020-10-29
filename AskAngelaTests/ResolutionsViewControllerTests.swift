@@ -30,7 +30,7 @@ class ResolutionsViewControllerTests: XCTestCase {
         
     }
     
-    func test_resolutionsArray_isNotNil() {
+    func test_resolutionsArray_hasInitiated() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.resolutionsArray)

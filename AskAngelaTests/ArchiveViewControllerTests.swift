@@ -23,11 +23,18 @@ class ArchiveViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_outlets_shouldBeConnected() {
+    func test_tableView_shouldBeConnected() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.archiveTableView)
+        
+    }
+    
+    func test_Array_hasInitiated() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.archivedNotesArray)
         
     }
+    
 }
