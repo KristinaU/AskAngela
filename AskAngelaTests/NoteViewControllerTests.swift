@@ -23,11 +23,18 @@ class NoteViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_outlets_shouldBeConnected() {
+    func test_label_shouldBeConnected() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.outputLabelText)
+        
+    }
+    
+    func test_textField_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.noteTextField)
         
     }
+    
 }
