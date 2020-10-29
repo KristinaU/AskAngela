@@ -23,15 +23,46 @@ class AddResolutionViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_outlets_shouldBeConnected() {
+    func test_selectedDaysArray_hasInitiated() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.selectedDays)
+        
+    }
+    
+    func test_titleField_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.resolutionTitle)
+        
+    }
+    
+    func test_textField_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.resolutionText)
+        
+    }
+    
+    func test_label_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.outputLabelText)
+        
+    }
+    
+    func test_image_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.weCanDoIt)
+        
+    }
+    
+    func test_segmentedControl_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.selectNotifications)
         
     }
+    
 }
