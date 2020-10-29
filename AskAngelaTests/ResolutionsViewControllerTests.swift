@@ -23,11 +23,21 @@ class ResolutionsViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_outlets_shouldBeConnected() {
+    func test_tableView_shouldBeConnected() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.resolutionsTableView)
+        
+    }
+    
+    func test_resolutionsArray_isNotNil() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.resolutionsArray)
         
     }
+    
+    
+    
+    
 }
