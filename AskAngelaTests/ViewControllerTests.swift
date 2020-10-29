@@ -23,12 +23,25 @@ class ViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_outlets_shouldBeConnected() {
+    func test_textView_shouldBeConnected() {
         sut.loadViewIfNeeded()
 
         XCTAssertNotNil(sut.mainTextView)
+        
+    }
+    
+    func test_tableView_shouldBeConnected() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.mainTableView)
+        
+    }
+    
+    func test_showJoke_isWorking() {
+        sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.showJoke())
         
     }
+    
 }
