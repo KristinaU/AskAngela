@@ -12,7 +12,7 @@ import UIKit
 
 class CoreDataController {
     
-    private init() {}
+    init() {}
     
     static let shared = CoreDataController()
     

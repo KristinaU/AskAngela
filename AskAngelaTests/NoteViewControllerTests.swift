@@ -15,7 +15,8 @@ class NoteViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as? NoteViewController
+        self.sut = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as? NoteViewController
+        
     }
 
     override func tearDown() {
