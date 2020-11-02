@@ -105,14 +105,19 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     goAhead += String(streakNow) + " days"
     
-    let alert = UIAlertController(title: goAhead, message: resolutionsArray[indexPath.row].text, preferredStyle: .alert)
+    let alert = UIAlertController(title: goAhead, message: currentResolution.text, preferredStyle: .alert)
 
     alert.addAction(UIAlertAction(title: "Wow!", style: .default, handler: nil))
 
+    alert.addAction(UIAlertAction(title: "Share", style: .default) {
+        (action) -> Void in
+        let activityViewController = UIActivityViewController(activityItems: [currentResolution.text ?? "\"Ask Angela\" is the coolest app ever!"], applicationActivities: nil)
+
+        self.present(activityViewController, animated: true, completion: nil)
+    })
+    
     self.present(alert, animated: true)
     
-    print(currentResolution.notifyArray)
-
 }
 
 }
