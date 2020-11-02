@@ -335,8 +335,8 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bce-XG-0Cb">
                                 <rect key="frame" x="0.0" y="420" width="411" height="388"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often do you want to check your progress?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-SW-0E0">
-                                        <rect key="frame" x="25" y="45" width="365" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When do you want to check your progress?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-SW-0E0">
+                                        <rect key="frame" x="25" y="45" width="331" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="wvu-ly-ADy"/>
                                         </constraints>
@@ -345,14 +345,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76W-bG-89U">
-                                        <rect key="frame" x="140.5" y="302.5" width="134" height="30"/>
+                                        <rect key="frame" x="123.5" y="302.5" width="134" height="30"/>
                                         <state key="normal" title="Save this resolution"/>
                                         <connections>
                                             <action selector="saveResolutionAction:" destination="BrY-Bz-LQL" eventType="touchUpInside" id="qHZ-GY-ro8"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-6u-SBL" customClass="MultiSelectSegmentedControl" customModule="MultiSelectSegmentedControl">
-                                        <rect key="frame" x="25" y="130" width="365" height="136.5"/>
+                                        <rect key="frame" x="25" y="130" width="331" height="136.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq8-Cq-Pck">
