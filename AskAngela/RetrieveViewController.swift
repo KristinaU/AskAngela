@@ -15,7 +15,7 @@ class RetrieveViewController: UIViewController {
     
     // MARK: - Properties
     
-    var currentNote = Note()
+    var currentNote: Note?
     
     let coreDataController = CoreDataController.shared
     
@@ -28,8 +28,8 @@ class RetrieveViewController: UIViewController {
     @IBAction func archiveAction(_ sender: Any) {
         
         let date = Date()
-        currentNote.dateArchived = date
-        currentNote.archived = true
+        currentNote?.dateArchived = date
+        currentNote?.archived = true
         coreDataController.saveContext()
         self.reload()
         }
@@ -42,7 +42,7 @@ class RetrieveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareAction))
         self.reload()
     }
     
@@ -70,7 +70,7 @@ class RetrieveViewController: UIViewController {
 
                 currentNote = notesArray[randomNumber]
             
-                retrieveTextView.text = currentNote.text
+                retrieveTextView.text = currentNote?.text
                 
             }
             
@@ -85,6 +85,15 @@ class RetrieveViewController: UIViewController {
             print(fetch_error.localizedDescription)
         }
         
+    }
+    
+    @objc func shareAction () {
+        
+        let activityViewController = UIActivityViewController(activityItems: [currentNote?.text ?? "\"Ask Angela\" is the coolest app ever!"], applicationActivities: nil)
+    
+        activityViewController.isModalInPresentation = true
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
 }
