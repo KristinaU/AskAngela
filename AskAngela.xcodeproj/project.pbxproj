@@ -13,6 +13,7 @@
 		D72653102549F3F4007F3FBD /* ArchiveViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */; };
 		D72653132549F41F007F3FBD /* AddResolutionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */; };
 		D72653162549F440007F3FBD /* ResolutionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */; };
+		D75C5CED2552D846005010C8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D75C5CEC2552D846005010C8 /* Settings.bundle */; };
 		D7AD5F162535DF01009D07CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F152535DF01009D07CD /* AppDelegate.swift */; };
 		D7AD5F182535DF01009D07CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F172535DF01009D07CD /* SceneDelegate.swift */; };
 		D7AD5F1A2535DF01009D07CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD5F192535DF01009D07CD /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		D726530E2549F3F4007F3FBD /* ArchiveViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewControllerTests.swift; sourceTree = "<group>"; };
 		D72653112549F41F007F3FBD /* AddResolutionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResolutionViewControllerTests.swift; sourceTree = "<group>"; };
 		D72653142549F440007F3FBD /* ResolutionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionsViewControllerTests.swift; sourceTree = "<group>"; };
+		D75C5CEC2552D846005010C8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D7AD5F122535DF01009D07CD /* AskAngela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskAngela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AD5F152535DF01009D07CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AD5F172535DF01009D07CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D7AD5F152535DF01009D07CD /* AppDelegate.swift */,
 				D7AD5F172535DF01009D07CD /* SceneDelegate.swift */,
 				D71BAA70253DE3B30077FB22 /* ResolutionsViewController.swift */,
+				D75C5CEC2552D846005010C8 /* Settings.bundle */,
 				D7B19C62253D47450066B0E1 /* AddResolutionViewController.swift */,
 				D7B19C6B253D673E0066B0E1 /* MultiSegmentPicker.swift */,
 				D7ECCF0625387ABF00A350C2 /* ArchiveViewController.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75C5CED2552D846005010C8 /* Settings.bundle in Resources */,
 				D7AD5F252535DF04009D07CD /* LaunchScreen.storyboard in Resources */,
 				D7AD5F222535DF04009D07CD /* Assets.xcassets in Resources */,
 				D7AD5F1D2535DF01009D07CD /* Main.storyboard in Resources */,
