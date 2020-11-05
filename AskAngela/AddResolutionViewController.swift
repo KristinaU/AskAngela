@@ -53,6 +53,8 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
            
         newResolution.title = resolutionTitle.text
         newResolution.text = resolutionText.text
+        
+        
         newResolution.dateAdded = Date()
         newResolution.isStreak = false
         newResolution.streakNow = 0

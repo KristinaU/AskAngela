@@ -26,7 +26,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>To erase all your data, slide slider and switch switch</string>
+			<string>Erase ALL data: slide slider, switch switch</string>
 			<key>Key</key>
 			<string>eraser_toggle</string>
 			<key>DefaultValue</key>

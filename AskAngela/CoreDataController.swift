@@ -49,6 +49,22 @@ class CoreDataController {
         }
         return false
     }
+    
+    func insertNote( text: String ) -> Note? {
+        
+        let context = persistentContainer.viewContext
+        
+        let newNote = Note(context: context)
+        
+        newNote.text = text
+        newNote.colour = "White"              // Not in use yet, open for extension
+        newNote.dateCreated = Date()
+        newNote.dateArchived = nil
+        newNote.archived = false
+        
+        return newNote
+        
+    }
 
 }
 

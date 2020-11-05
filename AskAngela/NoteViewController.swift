@@ -24,16 +24,18 @@ class NoteViewController: UIViewController {
     // MARK: - Action to save note and set new Note Core data object
     
     @IBAction func saveNoteAction(_ sender: UIButton) {
+
+        coreDataController.insertNote(text: noteTextField.text)
         
-        let mainContext = coreDataController.mainContext
-        
-        let newNote = Note(context: mainContext)
-        
-        newNote.text = noteTextField.text
-        newNote.colour = "White"              // Not in use yet, open for extension
-        newNote.dateCreated = Date()
-        newNote.dateArchived = nil
-        newNote.archived = false              // Will be true when archived
+//        let mainContext = coreDataController.mainContext
+//        
+//        let newNote = Note(context: mainContext)
+//        
+//        newNote.text = noteTextField.text
+//        newNote.colour = "White"              // Not in use yet, open for extension
+//        newNote.dateCreated = Date()
+//        newNote.dateArchived = nil
+//        newNote.archived = false              // Will be true when archived
         
         outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
         
