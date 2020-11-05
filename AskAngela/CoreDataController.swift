@@ -12,7 +12,7 @@ import UIKit
 
 class CoreDataController {
     
-    init() {}
+//    init() {}
     
     static let shared = CoreDataController()
     
@@ -22,16 +22,16 @@ class CoreDataController {
     
     // MARK: - Core Data Stack
     lazy var persistentContainer: NSPersistentContainer = {
-        
+
         let container = NSPersistentContainer(name: "AskAngela")
         container.loadPersistentStores(completionHandler : { (storeDescription, error) in
             if let error = error as NSError? {
-                
+
                 fatalError ("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
-        
+
     }()
     
     // MARK: - Core Data Saving support
@@ -63,6 +63,25 @@ class CoreDataController {
         newNote.archived = false
         
         return newNote
+        
+    }
+    
+    func insertResolution( title: String, text: String, days: [String] ) -> Resolution? {
+        
+        let context = persistentContainer.viewContext
+        
+        let newResolution = Resolution(context: context)
+       
+        newResolution.title = title
+        newResolution.text = text
+        
+        newResolution.dateAdded = Date()
+        newResolution.isStreak = false
+        newResolution.streakNow = 0
+        newResolution.gotNotifiedToday = false
+        newResolution.notifyArray = days
+        
+        return newResolution
         
     }
 

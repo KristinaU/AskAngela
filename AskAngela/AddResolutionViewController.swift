@@ -47,20 +47,9 @@ class AddResolutionViewController: UIViewController & UIImagePickerControllerDel
            
         let coreDataController = CoreDataController.shared
         
-        let mainContext = coreDataController.mainContext
-           
-        let newResolution = Resolution(context: mainContext)
-           
-        newResolution.title = resolutionTitle.text
-        newResolution.text = resolutionText.text
-        
-        
-        newResolution.dateAdded = Date()
-        newResolution.isStreak = false
-        newResolution.streakNow = 0
-        newResolution.gotNotifiedToday = false
-        newResolution.notifyArray = selectedDays
-        
+        coreDataController.insertResolution(title: resolutionTitle.text ?? "Your first resolution",
+                                            text: resolutionText.text,
+                                            days: selectedDays)
         
         outputLabelText.text = coreDataController.saveContext() ? "Saved" : "Not saved"
            

@@ -18,9 +18,9 @@ class CoreDataTests: XCTestCase {
         
         super.setUp()
         
-        initStubs()
+//        initStubs()
         
-        sut = CoreDataController.shared
+        sut = CoreDataController()
     }
 
     override func tearDown() {
@@ -32,47 +32,33 @@ class CoreDataTests: XCTestCase {
     
     func test_create_note() {
         
-        //Given the text & colour
-        let text = "Note 1"
-        let colour = "Cyan"
+        //Given the text
+        let text = "Testable Note 2"
         
         //When add note
-        let note = sut.insertNote(text: text, colour: colour)
+        let note = sut.insertNote(text: text)
         
         //Assert: return note item
         XCTAssertNotNil( note )
 
     }
     
-    func test_fetch_all_notes() {
+    func test_create_resolution() {
         
-        //When fetch
-        let results = sut.fetchAll()
+        //Given the title and text
+        let title = "Title 1"
+        let text = "Text 2"
+        let days = ["Mon", "Sat", "Sun"]
         
-        //Assert return 5 note items
-        XCTAssertEqual(results.count, 5)
+        //When add resolution
+        let resolution = sut.insertResolution(title: title, text: text, days: days)
+        
+        //Assert: return resolution item
+        XCTAssertNotNil( resolution )
+
     }
-    
-    
-    func test_save() {
-        
-        //Give a note item
-        let text = "Test Note"
-        let colour = "White"
-        
-        _ = expectationForSaveNotification()
-        
-        _ = sut.insertNote(text: text, colour: colour)
-        
-        //Assert save is called via notification (wait)
-        expectation(forNotification: NSNotification.Name(rawValue: Notification.Name.NSManagedObjectContextDidSave.rawValue), object: nil, handler: nil)
-        
-        sut.saveContext()
-        
-        waitForExpectations(timeout: 1.0, handler: nil)
-        
-        
-    }
+
+
     
     
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -100,60 +86,12 @@ class CoreDataTests: XCTestCase {
         return container
     }()
     
-    //MARK: Convinient function for notification
-    var saveNotificationCompleteHandler: ((Notification)->())?
-    
-    func expectationForSaveNotification() -> XCTestExpectation {
-        let expect = expectation(description: "Context Saved")
-        waitForSavedNotification { (notification) in
-            expect.fulfill()
-        }
-        return expect
-    }
-    
-    func waitForSavedNotification(completeHandler: @escaping ((Notification)->()) ) {
-        saveNotificationCompleteHandler = completeHandler
-    }
-    
-    func contextSaved( notification: Notification ) {
-        print("\(notification)")
-        saveNotificationCompleteHandler?(notification)
-    }
 
 }
 
 //MARK: Creat some fakes
 extension CoreDataTests {
     
-    func initStubs() {
-        
-        func insertNote( text: String, colour: String) -> Note? {
-            
-            let objNote = NSEntityDescription.insertNewObject(forEntityName: "Note", into: mockPersistentContainer.viewContext)
-            
-            objNote.setValue(text, forKey: "text")
-            objNote.setValue(colour, forKey: "colour")
-            objNote.setValue(Date(), forKey: "dateCreated")
-            objNote.setValue(nil, forKey: "dateArchived")
-            objNote.setValue(false, forKey: "archived")
-
-            return objNote as? Note
-        }
-        
-        _ = insertNote(text: "This is a test Note 1", colour: "White")
-        _ = insertNote(text: "This is a test Note 2", colour: "Green")
-        _ = insertNote(text: "This is a test Note 3", colour: "Red")
-        _ = insertNote(text: "This is a test Note 4", colour: "Blue")
-        _ = insertNote(text: "This is a test Note 5", colour: "Yellow")
-        
-        
-        do {
-            try mockPersistentContainer.viewContext.save()
-        }  catch {
-            print("create fakes error \(error)")
-        }
-        
-    }
     
     func flushData() {
         
@@ -167,10 +105,4 @@ extension CoreDataTests {
         
     }
  
-    func numberOfItemsInPersistentStore() -> Int {
-        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Note")
-        let results = try! mockPersistentContainer.viewContext.fetch(request)
-        return results.count
-    }
-    
 }
